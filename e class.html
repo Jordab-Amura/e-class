@@ -307,15 +307,18 @@
       <section class="tiles" id="tiles">
         <article class="tile" data-tile="pending">
           <div class="icon" aria-hidden="true"></div>
-          <h3>PENDING CLASS</h3>
-          <div class="count" id="pendingCount">0 items</div>
-          <div class="actions">
-            <button class="btn primary" data-action="view-pending">View</button>
-  
-            <!-- PDF upload enabled -->
-<input type="file" >
-          </div>
-        </article>
+  <h3>PENDING CLASS</h3>
+<div class="count" id="pendingCount">0 items</div>
+<div class="actions">
+  <button class="btn primary" id="viewPendingBtn" data-action="view-pending">View</button>
+  <button class="btn" id="uploadBtn">Upload files</button>
+  <input type="file" id="fileInput" multiple style="display:none" />
+</div>
+
+<div id="uploadList" aria-live="polite"></div>
+
+<!-- Include the upload script (adjust path as needed) -->
+<script src="/js/upload.js"></script>
 
         <article class="tile" data-tile="past">
           <div class="icon" aria-hidden="true"></div>
@@ -582,3 +585,4 @@
   </script>
 </body>
 </html>
+
